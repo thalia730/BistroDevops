@@ -1,0 +1,19 @@
+BISTRÔ SABOR DA VILA — IMPRESSÃO DE COMPROVANTE
+
+ARQUIVOS
+- index.php: atualizado com o link "Imprimir nota" em cada comanda.
+- nota_fiscal.php: novo arquivo que consulta a comanda e monta o comprovante para impressão.
+- assets/style.css: estilos existentes + pequeno ajuste do link de impressão.
+- config/database.php, produtos.php e database.sql: mantidos.
+
+COMO INSTALAR
+1. Faça uma cópia de segurança da pasta atual do projeto.
+2. Copie os arquivos deste pacote para dentro da pasta bistro_devops, mantendo as pastas.
+3. Se o sistema já está configurado, mantenha suas credenciais em config/database.php. O arquivo incluído é a cópia do arquivo enviado.
+4. Abra o painel normalmente: http://localhost/bistro_devops/
+5. Em qualquer comanda, clique em "Imprimir nota".
+6. Na tela aberta, clique em "Imprimir / Salvar em PDF". Na janela do navegador, escolha uma impressora ou "Salvar como PDF".
+
+IMPORTANTE
+O documento é um COMPROVANTE DE VENDA demonstrativo, não uma nota fiscal eletrônica oficial.
+Para emitir NF-e/NFC-e válida é necessária integração com serviço fiscal autorizado, certificado digital e credenciamento/configuração tributária apropriados.
