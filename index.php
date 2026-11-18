@@ -49,7 +49,11 @@ $itensPor=[];
 if($comandas){$ids=array_map(fn($c)=>(int)$c['id'],$comandas);$ph=implode(',',array_fill(0,count($ids),'?'));$s=$pdo->prepare("SELECT * FROM itens_comanda WHERE comanda_id IN ($ph) ORDER BY id");$s->execute($ids);foreach($s->fetchAll() as $i)$itensPor[$i['comanda_id']][]=$i;}
 ?>
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Comandas | Bistrô Sabor da Vila</title><link rel="stylesheet" href="assets/style.css"></head><body>
-<header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="index.php"><span class="brand-icon">SV</span><span>Bistrô <b>Sabor da Vila</b><small>PAINEL DE COMANDAS</small></span></a><nav><a class="nav-active" href="index.php">Comandas</a><a href="produtos.php">Produtos</a></nav></div></header>
+<header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="index.php"><span class="brand-icon">SV</span><span>Bistrô <b>Sabor da Vila</b><small>PAINEL DE COMANDAS</small></span></a><nav>
+    <a class="nav-active" href="index.php">Comandas</a>
+    <a href="produtos.php">Produtos</a>
+    <a href="clientes.php">Clientes</a>
+</nav></div></header>
 <main class="wrap"><section class="hero"><div><span class="eyebrow">OPERAÇÃO DA COZINHA</span><h1>Comandas do restaurante</h1><p>Registre pedidos, acompanhe o preparo e marque pedidos entregues.</p></div><div class="hero-mark">☕</div></section>
 <?php if($erro):?><div class="alert error"><?=e($erro)?></div><?php endif;?><?php if($sucesso):?><div class="alert success"><?=e($sucesso)?></div><?php endif;?>
 <section class="layout"><div class="panel"><div class="panel-heading"><div><span class="step">01 / NOVO PEDIDO</span><h2>Abrir comanda</h2></div><span class="pill">Cozinha</span></div>
